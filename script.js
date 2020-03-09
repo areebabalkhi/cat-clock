@@ -44,13 +44,16 @@ var updateClock = function () {
 	}
 }
 var partyTime = function () {
+	var message = document.getElementById("timeEvent");
 	if (isPartyTime == false) {
 		isPartyTime = true;
 		document.getElementById("lolcat").src = './happy bird.jpg';
 		partyButton.innerText = "End Party Time :(";
+		message.innerText = "money money money";
 	} else {
 		isPartyTime = false;
 		partyButton.innerText = "Party Time!";
+		message.innerText = "loading...";
 		document.getElementById("lolcat").src = './loading.gif';
 	}
 }
